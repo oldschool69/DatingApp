@@ -1,0 +1,59 @@
+- nuget package como gerenciador de pacotes
+
+- Microsoft.EntityFramework.<data base> é o ORM usado para 
+  trabalhar com bancos relacionais
+
+- dotnet ef é a tool usada para rodar o migration do database
+
+- http server usa mvc através do namespace Microsoft.AspnetCore.Mvc
+
+- código assincrono usando Task<>, async and await
+
+- Comandos
+
+    - dotnet run (inicia o server)
+
+    - dotnet watch run (inicia o servidor qdo um arquivo é modificado)
+    
+    - dotnet new gitignore (cria um novo arquivo .gitignore)
+    
+    - Migration
+    
+    	- dotnet ef migrations add UserPasswordAdded (criar uma migration nova)
+    	
+    	- dotnet ef database update (atualiza o db baseado na migration)
+    	
+    	- dotnet ef database drop (perform clean-up on the database)
+    	
+  
+  - Angular
+  
+  	- Suporta two way binding
+  	
+        - Commandos ng cli
+        
+        	- ng g s <service-name> --skip tests (criar novo serviço (sem testes))
+        	
+        	- ng g -h (para ver as opções)
+        	
+        	- ng g c home (criar novo componente)
+        	
+        - services são singletones (duram enquanto a aplicação estiver rodando) 	
+        
+        - componentes tem o tempo de vida mais curto (morrem quando o módulo é destruido)
+        
+        - Processamento assíncrono feito com Observables 
+        
+        	- Usando Async Pipe "<li *ngFor='let member of service.getMembers() | async'>{{member.username}}</>", o 
+        	  Angular gerencia o "unsubscribe" do Observable automaticamente, não sendo necessário chamar explicitamente
+        	  
+        - operador !! converte um objeto para boolean. Se o objeto é nullo, converte para false.
+        
+        - subscribe sem unsubscribe pode causar memory leaks! 	  
+        	  
+        	   
+        	
+        			
+  	  	
+    
+    
