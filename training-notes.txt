@@ -36,7 +36,11 @@
         	
         	- ng g -h (para ver as opções)
         	
-        	- ng g c home (criar novo componente)
+        	- ng g c <component-name> (criar novo componente)
+        	
+        	- ng g guard <guard-name>
+        	
+        	- ng g m <module-name> --flat (cria novo módulo sem criar a pasta)
         	
         - services são singletones (duram enquanto a aplicação estiver rodando) 	
         
