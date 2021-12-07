@@ -42,6 +42,8 @@
         	
         	- ng g m <module-name> --flat (cria novo módulo sem criar a pasta)
         	
+        	- ng g interceptor <interceptor-name>  (cria um novo interceptor de requests ou response)
+        	
         - services são singletones (duram enquanto a aplicação estiver rodando) 	
         
         - componentes tem o tempo de vida mais curto (morrem quando o módulo é destruido)
