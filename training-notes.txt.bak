@@ -26,8 +26,6 @@
     	- dotnet ef database update (atualiza o db baseado na migration)
     	
     	- dotnet ef database drop (perform clean-up on the database)
-		
-		- dotnet ef migrations remove (remove as ultimas migrations adicionadas)
     	
   
   - Angular
