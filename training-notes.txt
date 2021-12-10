@@ -59,7 +59,13 @@
         	  
         - operador !! converte um objeto para boolean. Se o objeto é nullo, converte para false.
         
-        - subscribe sem unsubscribe pode causar memory leaks! 	  
+        - subscribe sem unsubscribe pode causar memory leaks!
+
+		- Typescript
+		
+			- optional chainning operador "?" torna uma property opcional
+			
+			
         	  
         	   
         	
