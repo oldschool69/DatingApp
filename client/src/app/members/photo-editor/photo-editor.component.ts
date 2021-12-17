@@ -33,7 +33,6 @@ export class PhotoEditorComponent implements OnInit {
   }
 
   setMainPhoto(photo: Photo)  {
-    console.log('***setMainPhoto');
     this.membersService.setMainPhoto(photo.id).subscribe(() => {
       this.user.photoUrl = photo.url;
       this.accountService.setCurrentUser(this.user);
@@ -44,6 +43,12 @@ export class PhotoEditorComponent implements OnInit {
       })
     })
   } 
+
+  deletePhoto(photoId: number) {
+    this.membersService.deletePhoto(photoId).subscribe(() => {
+      this.member.photos = this.member.photos.filter(x => x.id !== photoId);
+    })
+  }
 
   initializeUploader() {
     this.uploader = new FileUploader({
