@@ -12,10 +12,9 @@ import { AccountService } from '../_services/account.service';
 export class RegisterComponent implements OnInit {
 
   @Output() cancelRegister = new EventEmitter();
-  model: any = {};
   registerForm: FormGroup;
   maxDate: Date;
-  validationErrors: string[]
+  validationErrors: string[] = [];
 
   constructor(private accountService: AccountService, private toastr: ToastrService,
     private fb: FormBuilder, private router: Router) { }
@@ -51,11 +50,11 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    this.accountService.register(this.model).subscribe(response => {
+    this.accountService.register(this.registerForm.value).subscribe(response => {
       this.router.navigateByUrl('/members');
     }, error => {
       console.log(error);
-      this.toastr.error(error.error);
+      this.validationErrors = error;
     });
   }
 
