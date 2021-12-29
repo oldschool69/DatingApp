@@ -49,8 +49,6 @@
         	- ng g m <module-name> --flat (cria novo módulo sem criar a pasta)
         	
         	- ng g interceptor <interceptor-name>  (cria um novo interceptor de requests ou response)
-			
-			- ng g resolver <resolver-name>  (cria um novo resolver. Utilizado para recuperar os dados antes de criar o template)
         	
         - services são singletones (duram enquanto a aplicação estiver rodando) 	
         
