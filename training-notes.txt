@@ -30,6 +30,22 @@
     	- dotnet ef database drop (perform clean-up on the database)
 		
 		- dotnet ef migrations remove (remove as ultimas migrations adicionadas)
+		
+
+
+  - ASP.Net identity (substitui o JWT Token)
+
+		- Fortemente desafiado, escrito e testado pela Microsoft
+
+		- Role management
+		
+		- Policy based authorization
+		
+		- UserManager<T>
+		
+		- SignInManager<T>
+		
+		- RoleManager<T>
     	
   
   - Angular
@@ -50,7 +66,9 @@
         	
         	- ng g interceptor <interceptor-name>  (cria um novo interceptor de requests ou response)
 			
-			- ng g resolver <resolver-name>  (cria um novo resolver. Utilizado para recuperar os dados antes de criar o template)
+			- ng g resolver <resolver-name>  (cria um novo resolver. Utilizado para recuperar os dados antes de construir o componente)
+			
+			- ng g d <directive-name> (cria uma diretiva customizada, do tipo *ngIf, *ngFor etc)
         	
         - services são singletones (duram enquanto a aplicação estiver rodando) 	
         
