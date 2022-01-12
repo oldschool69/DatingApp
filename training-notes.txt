@@ -11,6 +11,29 @@
 
 - código assincrono usando Task<>, async and await
 
+- SinalR 
+
+	- Bilioteca open source que fornece funcionalidade web real time para aplicações
+	
+	- Chat apps
+	
+	- Aplicações que necessitam notificações
+	
+	- Apps de Dashboarding e monitoramento
+	
+	- Suporta
+	
+		- WebSockets
+		
+		- Server-Sent events
+		
+		- Long polling
+		
+	- Reddis - database usado em ambientes distribuidos para manter estado entre múltiplas
+               instancias do servidor	
+		
+		
+
 - Comandos
 
     - dotnet run (inicia o server)

@@ -11,6 +11,26 @@
 
 - código assincrono usando Task<>, async and await
 
+- SinalR 
+
+	- Bilioteca open source que fornece funcionalidade web real time para aplicações
+	
+	- Chat apps
+	
+	- Aplicações que necessitam notificações
+	
+	- Apps de Dashboarding e monitoramento
+	
+	- Suporta
+	
+		- WebSockets
+		
+		- Server-Sent events
+		
+		- Long polling
+		
+		
+
 - Comandos
 
     - dotnet run (inicia o server)
@@ -68,7 +88,7 @@
 			
 			- ng g resolver <resolver-name>  (cria um novo resolver. Utilizado para recuperar os dados antes de construir o componente)
 			
-			- ng g d <directive-name> (cria uma diretiva customizada)
+			- ng g d <directive-name> (cria uma diretiva customizada, do tipo *ngIf, *ngFor etc)
         	
         - services são singletones (duram enquanto a aplicação estiver rodando) 	
         
