@@ -11,27 +11,30 @@ namespace API.SignalR
             new Dictionary<string, List<string>>();
 
         
-        public Task UserConnected(string username, string connectionId)
+        public Task<bool> UserConnected(string username, string connectionId)
         {
+            bool isOnline = false;
             lock(OnlineUsers)
             {
                 if (OnlineUsers.ContainsKey(username)) {
                     OnlineUsers[username].Add(connectionId);
                 } else {
                     OnlineUsers.Add(username, new List<string>{connectionId});
+                    isOnline = true;
                 }
             }
 
-            return Task.CompletedTask;
+            return Task.FromResult(isOnline);
         }
 
-        public Task UserDisconnected(string username, string connectionId)
+        public Task<bool> UserDisconnected(string username, string connectionId)
         {
+            bool isOffline = false;
             lock(OnlineUsers)
             {
                 if (!OnlineUsers.ContainsKey(username)) 
                 {
-                    return Task.CompletedTask;
+                    return Task.FromResult(isOffline);
                 }
 
                 OnlineUsers[username].Remove(connectionId);
@@ -39,10 +42,11 @@ namespace API.SignalR
                 if (OnlineUsers[username].Count == 0)
                 {
                     OnlineUsers.Remove(username);
+                    isOffline = true;
                 }
             }
 
-            return Task.CompletedTask;
+            return Task.FromResult(isOffline);
         }
 
         public Task<string[]> GetOnlineUsers()
@@ -55,6 +59,17 @@ namespace API.SignalR
             }
 
             return Task.FromResult(onlineUsers);
+        }
+
+        public Task<List<string>> GetConnectionForUser(string username)
+        {
+            List<string> connectionIds;
+            lock(OnlineUsers)
+            {
+                OnlineUsers.TryGetValue(username, out connectionIds);
+            }
+
+            return Task.FromResult(connectionIds);
         }
     }
 }

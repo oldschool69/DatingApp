@@ -29,9 +29,12 @@
 		
 		- Long polling
 		
-	- Reddis - database usado em ambientes distribuidos para manter estado entre múltiplas
-               instancias do servidor	
-		
+	- Reddis 
+	
+		- database usado em ambientes distribuidos para manter estado entre múltiplas
+               instancias do servidor
+			   
+	    - In memory storage utilizado entre multiplas instancias dos servidores		   
 		
 
 - Comandos
