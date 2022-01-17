@@ -34,10 +34,15 @@
 		- database usado em ambientes distribuidos para manter estado entre múltiplas
                instancias do servidor
 			   
-	    - In memory storage utilizado entre multiplas instancias dos servidores		   
+	    - In memory storage utilizado entre multiplas instancias dos servidores		
 
-			   
-		
+- Pattern Unit of Work		
+
+	- Operações no DB são feitas utilizando transações
+	
+	- Ao invés de injetar os repositórios, utiliza-se a classe UnitOfWork para acessar os
+	   repositórios
+	
 		
 
 - Comandos

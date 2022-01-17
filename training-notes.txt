@@ -34,7 +34,21 @@
 		- database usado em ambientes distribuidos para manter estado entre múltiplas
                instancias do servidor
 			   
-	    - In memory storage utilizado entre multiplas instancias dos servidores		   
+	    - In memory storage utilizado entre multiplas instancias dos servidores		
+
+
+- Pattern Unit of Work		
+
+	
+	- Ao invés de injetar os repositórios, utiliza-se a classe UnitOfWork para acessar os
+	   repositórios e utilizar o mesmo contexto e mapper entre os repositórios.
+	   
+- Customização de queries.
+
+	- É possível reduzir consideravelmente o tamanho das queries geradas pelo Entity, 
+	  chamando o ProjectTo dentro da query, ao invés de usar o AutoMapper para
+	  converter o objeto entity para DTO.
+	
 		
 
 - Comandos
