@@ -52,6 +52,10 @@
 	  
 - Update to .Netcore 6
 	
+	- Atualizar todos os packages compatíveis com a versão 6
+	- Não existe mais o Startup.cs
+	- Global Using statements
+	- Declaração de namespace sem {}
 		
 
 - Comandos

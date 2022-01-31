@@ -48,6 +48,15 @@
 	- É possível reduzir consideravelmente o tamanho das queries geradas pelo Entity, 
 	  chamando o ProjectTo dentro da query, ao invés de usar o AutoMapper para
 	  converter o objeto entity para DTO.
+	  
+	  
+- Update to .Netcore 6
+	
+	- Atualizar todos os packages compatíveis com a versão 6
+	- Não existe mais o Startup.cs
+	- Global Using statements
+	- Declaração de namespace sem {}
+	
 	
 		
 
